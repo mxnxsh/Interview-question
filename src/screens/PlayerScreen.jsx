@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 
 import Player from '../components/Player';
+import LoadingBox from '../components/LoadingBox';
 
 const PlayerScreen = () => {
   const [playersList, setPlayersList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
   useEffect(() => {
     const getData = async () => {
       try {
@@ -16,17 +17,30 @@ const PlayerScreen = () => {
         setLoading(false);
         setPlayersList(data.data.playerList.reverse());
       } catch (err) {
-        setLoading(false);
         setError(err.message);
+        setLoading(false);
+        console.log(err.message);
       }
     };
     getData();
   }, []);
 
   return loading ? (
-    <p>Loading...</p>
+    <LoadingBox />
   ) : error ? (
-    { error }
+    <p
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        minHeight: '100vh',
+        color: 'red',
+        fontWeight: 'bold',
+      }}
+    >
+      {error}
+    </p>
   ) : (
     <div className='row center'>
       {playersList.map(player => (
