@@ -1,0 +1,53 @@
+// var config = {
+    //   method: 'get',
+    //   url: 'https://api.jsonbin.io/b/604f1c137ea6546cf3ddf46e',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     Cookie: '__cfduid=def2089f88242326ccc9669e454b0ad0c1617781360',
+    //   },
+    //   data: data,
+    // };
+    // Axios(config)
+    //   .then(function (response) {
+    //     console.log(response);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+    // async function getData() {
+    //   try {
+    //     const data = await Axios.get(`https://api.jsonbin.io/b/604f1c137ea6546cf3ddf46e`)
+    //     console.log(data);
+    //   } catch (error) {
+
+    //   }
+    // }
+    // fetch(`https://api.jsonbin.io/b/604f1c137ea6546cf3ddf46e`)
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     setPlayersList(data);
+    //     setLoading(false);
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //     setLoading(false);
+    //     setError(err.message);
+    //   });
+
+    // <div className='card'>
+    //   <img className='medium' src={`assets/${Id}.jpg`} alt='fungus' />
+    //   <div className='card-body'>
+    //     <div>Player Name :- {PFName}</div>
+    //     <div>Style :- {SkillDesc}</div>
+    //     <div>Value:- $ {Value}</div>
+    //     {UpComingMatchesList.map(match => (
+    //       <div key={uuidv4()}>
+    //         <p>
+    //           UpComing Match :- {match.CCode} vs {match.VsCCode}
+    //         </p>
+    //         {/* <br/> */}
+    //         <p>Match Date :- {match.MDate.split('/').join('-')}</p>
+    //       </div>
+    //     ))}
+    //   </div>
+    // </div>
