@@ -50,9 +50,7 @@ body {
 .card-image {
   flex: 0.5;
 }
-.card-content {
-  /* flex: 1; */
-}
+
 .card .card-content p {
   margin: 1rem;
   padding: 0.8rem;
