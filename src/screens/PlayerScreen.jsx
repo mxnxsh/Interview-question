@@ -4,7 +4,7 @@ import Axios from 'axios';
 import Player from '../components/Player';
 import LoadingBox from '../components/LoadingBox';
 
-const PlayerScreen = () => {
+const PlayerScreen = props => {
   const [playersList, setPlayersList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -24,7 +24,14 @@ const PlayerScreen = () => {
     };
     getData();
   }, []);
-
+  const items =
+    props.text === ''
+      ? playersList
+      : playersList.filter(
+          player =>
+            player.PFName.toLowerCase() === props.text.toLowerCase() ||
+            player.TName.toLowerCase() === props.text.toLowerCase()
+        );
   return loading ? (
     <LoadingBox />
   ) : error ? (
@@ -43,7 +50,7 @@ const PlayerScreen = () => {
     </p>
   ) : (
     <div className='row center'>
-      {playersList.map(player => (
+      {items.map(player => (
         <Player key={player.Id} player={player} />
       ))}
     </div>
