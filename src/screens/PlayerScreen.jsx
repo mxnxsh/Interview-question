@@ -29,8 +29,8 @@ const PlayerScreen = props => {
       ? playersList
       : playersList.filter(
           player =>
-            player.PFName.toLowerCase().includes(props.text) ||
-            player.TName.toLowerCase().includes(props.text)
+            player.PFName.toLowerCase().includes(props.text.toLowerCase()) ||
+            player.TName.toLowerCase().includes(props.text.toLowerCase())
         );
   return loading ? (
     <LoadingBox />

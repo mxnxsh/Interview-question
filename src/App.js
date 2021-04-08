@@ -18,7 +18,7 @@ function App() {
           </button>
         </div>
       </div>
-      <PlayerScreen text={text} />
+      <PlayerScreen text={text.toLowerCase()} />
     </div>
   );
 }
