@@ -5,7 +5,6 @@ function App() {
   const [text, setText] = useState('')
   return (
     <div>
-
       <div className="wrap">
         <div className="search">
           <input
