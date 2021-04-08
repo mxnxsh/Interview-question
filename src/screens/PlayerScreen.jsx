@@ -50,9 +50,11 @@ const PlayerScreen = props => {
     </p>
   ) : (
     <div className='row center'>
-      {items.map(player => (
-        <Player key={player.Id} player={player} />
-      ))}
+      {items.length === 0 ? (
+        <p>No search found</p>
+      ) : (
+        items.map(player => <Player key={player.Id} player={player} />)
+      )}
     </div>
   );
 };
