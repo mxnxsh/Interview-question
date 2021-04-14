@@ -10,7 +10,7 @@ function App() {
           <input
             type="text"
             className="searchTerm"
-            placeholder="What are you looking for?"
+            placeholder="Search..."
             onChange={e => setText(e.target.value)}
           />
           <button type="submit" className="searchButton">
